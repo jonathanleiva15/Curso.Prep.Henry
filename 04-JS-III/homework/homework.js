@@ -59,7 +59,7 @@ function dePalabrasAFrase(palabras) {
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
   return palabras.join(' ');
-} 
+}
 
 
 function arrayContiene(array, elemento) {
@@ -103,13 +103,14 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+
   let aux = 0;
-  for (let i = 0; i < numeros.length; i++) {
-    if (aux < numeros[i]) {
-      aux = numeros[i];
+  numeros.forEach(function (a) {
+    if (a > aux){
+      aux= a;
     }
-    return aux
-  }
+  })
+  return aux;
 }
 
 
@@ -117,14 +118,29 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-  multi
+
+  if (arguments.length < 1) return 0;
+
+  var total = 1;
+  for (var i = 0; i < arguments.length; i++) {
+    total = total * arguments[i];
+  }
+  return total;
+
 }
 
 
 function cuentoElementos(arreglo) {
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 19.
   //Escribe tu código aquí
+  let contador = 0;
 
+  arreglo.forEach(function (a) {
+    if (a > 19){
+      contador += 1;
+    }
+  })
+  return contador;
 }
 
 
@@ -133,6 +149,8 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
+
+  if
 
 }
 
